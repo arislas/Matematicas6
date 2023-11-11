@@ -1,0 +1,97 @@
+\documentclass[12pt, a4paper]{book}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}                                          %Habilita las tildes
+\usepackage[spanish]{babel}                                          %Documento en español
+\usepackage{times}                                                   %Tipo de letra
+\usepackage[left=20mm,top=20mm,bottom=20mm,right=20mm]{geometry}     %Establece los márgenes
+\usepackage{amsmath,amssymb,yhmath}
+\usepackage{xlop}                                                    %Resuelve operaciones como en primaria.
+\usepackage[usenames]{color}
+\usepackage{eurosym}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage{enumerate}                                               %Cambia etiquetas de enumeraciones
+\usepackage{emptypage}                                               %Borra páginas en blanco
+\usepackage{pstricks}                                                %Divisiones Ruffini
+\usepackage{polynom}                                                 %Divisiones de polinomios
+\usepackage{venndiagram}                                             %Dibuja conjuntos
+\usepackage{tikz}                                                    %Dibuja conjuntos
+\usetikzlibrary{positioning,shapes,fit,arrows,babel}                 %Librería tikz
+\usepackage{framed}\definecolor{shadecolor}{RGB}{224,238,238}        %Crea párrafos encuadrados
+\newcommand{\placeholder}[1]{\rule{3mm}{0.1mm}}                      %Print -- regardless of the input
+\newcommand{\gobble}[1]{}                                            %Print <nothing> regardless of the input
+\usepackage{verbatim}                                                %Para comentar varias líneas.
+\usepackage{multirow}                                                %Para combinar columnas.
+\usepackage[hidelinks]{hyperref}                                     %Para añadir enlaces.
+\usepackage{array}                                                   %Para centrar contenido de tablas.
+\usepackage{vwcol} %Como multicols pero con columnas de diferente ancho.
+\usetikzlibrary{datavisualization}
+\usepackage{tkz-euclide}
+\usepackage{bm} %Para poner expresiones matemáticas en negrita
+
+\providecommand{\abs}[1]{\lvert#1\rvert} % para el valor absoluto
+\providecommand{\norm}[1]{\lVert#1\rVert} % Para el módulo
+
+% Para los cuadros de código
+\usepackage{tcolorbox}
+\tcbuselibrary{listingsutf8}
+
+% Para los cuadros normales
+% Cuadro numerado para ejemplos
+\newtcolorbox[auto counter, number within=section]{ejemplos}[2][]{colback=green!5!white,colframe=green!75!black, fonttitle=\bfseries, title=Ejemplo~\thetcbcounter: #2,#1}
+
+% Cuadro numerado para sintaxis
+\newtcolorbox[auto counter, number within=subsubsection]{sintaxis}[2][]{colback=cyan!5!white,colframe=cyan!75!black, fonttitle=\bfseries, title=Sintaxis~\thetcbcounter: #2,#1}
+
+% Cuadro numerado para notas importantes
+\newtcolorbox[auto counter, number within=subsubsection]{nota}[2][]{colback=pink!5!white,colframe=pink!75!black, fonttitle=\bfseries, title=Nota~\thetcbcounter: #2,#1}
+
+% Cuadro sin numerar para ejemplos
+\newtcolorbox{ejemplo}[2][]
+{colback=green!5!white,colframe=green!75!black,
+fonttitle=\bfseries, title=Ejemplos}
+
+% Para insertar dódigo
+\usepackage{listings}
+
+\setlength{\parskip}{3mm}   %Cambia el espaciado entre párrafos
+
+\title{MATEMÁTICAS 6}
+\author{}
+\date{}
+\setlength{\parindent}{0cm}                                          %Elimina sangrado
+\clearpage                                                           %Elimina numeración páginas en blanco
+
+\begin{document}
+
+\maketitle
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\tableofcontents                                                     %Índice del libro
+
+\addcontentsline{toc}{chapter}{TRIMESTRE 1}
+\part*{Trimestre 1}
+
+\include{Tema01_Conjuntos_de_numeros.tex}
+
+
+\addcontentsline{toc}{chapter}{TRIMESTRE 2}
+\part*{Trimestre 2}
+
+\include{Tema02_Potencias_y_raiz_cuadrada}
+\include{Tema03_Divisibilidad}
+\include{Tema04_Proporcionalidad_y_porcentajes}
+\include{Tema05_Estadistica_y_probabilidad}
+
+
+\addcontentsline{toc}{chapter}{TRIMESTRE 3}
+\part*{Trimestre 3}
+
+\include{Tema06_Sistema_metrico_decimal}
+\include{Tema07_Figuras_planas_y_cuerpos_geometricos}
+\include{Tema08_Sistema_sexagesimal}
+
+\end{document}
